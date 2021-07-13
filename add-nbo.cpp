@@ -4,31 +4,11 @@
 #include <stddef.h>
 #include <netinet/in.h>
 
-void dump(void* p, size_t n) {
-
-	uint8_t* u8 = static_cast<uint8_t*>(p);
-	size_t i = 0;
-
-	while (true) {
-
-		printf("%02X ", *u8++);
-
-		if (++i >= n) break;
-		if (i % 8 == 0)
-
-			printf("\n");
-
-	}
-
-	printf("\n");
-
-}
-
 void check_argc(int argc) {
 
     if (argc != 3) {
         
-        printf("[*] usage : ./add-nbo <arg1> <arg2>\n");
+        printf("[+] usage : ./add-nbo <arg1> <arg2>\n");
         exit(1);
 
     }
@@ -44,7 +24,7 @@ int read_file(char argv[]) {
 
     if(fp == NULL) {
 
-        printf("%s does not exist\n", argv);
+        printf("[+] %s does not exist\n", argv);
         exit(1);
 
     } else {
