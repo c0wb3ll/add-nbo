@@ -14,7 +14,7 @@ void check_argc(int argc) {
     }
 }
 
-int read_file(char argv[]) {
+uint32_t read_file(char argv[]) {
 
     FILE *fp;
     uint32_t tmp;
@@ -39,7 +39,7 @@ int read_file(char argv[]) {
 
 }
 
-int sum(uint32_t num1, uint32_t num2) {
+uint32_t sum(uint32_t num1, uint32_t num2) {
 
     return num1 + num2;
 
